@@ -43,7 +43,13 @@ function start() {
         hoursOutput.innerHTML = hours;
         minutesOutput.innerHTML = minutes;
         secondsOutput.innerHTML = seconds;
-        if (differenceMs <= 0) { clearInterval(timerId); dateInput.disabled = false; };
+        if (differenceMs <= 0) {
+            clearInterval(timerId); dateInput.disabled = false;
+            daysOutput.innerHTML = '00';
+            hoursOutput.innerHTML = '00';
+            minutesOutput.innerHTML = '00';
+            secondsOutput.innerHTML = '00';
+        };
     }, 1000);
 }
 
